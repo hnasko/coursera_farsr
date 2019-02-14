@@ -1,0 +1,58 @@
+---
+title: "FARSR Analysis Package"
+author: "Hanna Nasko"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+This packages is designed for work with the data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS).
+
+The package provides functionality: 
+* to read data from files;
+* to summarise data on a yearly basis;
+* to visualise incidents in a given state and year.
+
+
+## Package functionality
+
+Remote files can not be automatically downloaded by this package. So before you start, you have to download data and place it in the working directory. The data could be stored in comma separated files or could be compressed in .gz, .bz2, .xz, or .zip files. Archives will be automatically uncompressed.
+
+The core function in the package is `fars_read` which allows to read data from the file. In case when it is necessary to read data for a particular year you may use for that `make_filename` function which generates appropriate filename.
+
+```{r, eval = FALSE}
+library(farsr)
+dt <- fars_read(make_filename(2014))
+```
+
+It is also possible to read multiple files with a function `fars_read_years`.
+
+```{r, eval = FALSE}
+dt <- fars_read_years(2013:2015)
+```
+
+`fars_summarize_years` allows to evaluate quickly the number of incidents by year and month.
+
+```{r, eval = FALSE}
+fars_summarize_years(2013:2015)
+```
+
+
+Users may also visualize on a map accidents by specified state and year with `fars_map_state`.
+
+```{r, eval = FALSE}
+fars_map_state(4,2013)
+```
+
