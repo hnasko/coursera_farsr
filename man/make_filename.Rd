@@ -17,11 +17,9 @@ This function transform a character or a numeric vector with the
 sequence of numbers into a unified filename.
 }
 \examples{
+\dontrun{
 make_filename(2019)
 make_filename(c(2019, 2018, "2017"))
-
-\dontrun{
-make_filename("a character")
 }
 
 }

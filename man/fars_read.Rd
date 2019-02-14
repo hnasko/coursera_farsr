@@ -19,11 +19,9 @@ automatically uncompressed.
 Files should be stored locally. Remote files can not be automatically downloaded.
 }
 \examples{
+\dontrun{
 fars_read(file.path("data", "accident_2013.csv.bz2"))
 fars_read("accident_2013.csv")
-
-\dontrun{
-fars_read("https://github.com/tidyverse/readr/raw/master/inst/extdata/mtcars.csv")
 }
 
 }

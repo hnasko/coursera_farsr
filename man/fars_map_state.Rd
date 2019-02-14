@@ -19,12 +19,9 @@ This function reads archive by specified year from working directory and
 draw accidents on a map by specified state and year
 }
 \examples{
+\dontrun{
 fars_map_state(4,2013)
 fars_map_state("6",2013)
-
-\dontrun{
-fars_map_state(c(4,6), 2013)
-fars_map_state(5, c(2019, 2018, "2017"))
 }
 
 }

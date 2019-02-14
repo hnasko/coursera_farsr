@@ -1,5 +1,6 @@
-context("Test farsr package")
 library(farsr)
+context("Test farsr package")
+
 
 test_that("make_filename check", {
 

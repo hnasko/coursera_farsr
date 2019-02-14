@@ -17,11 +17,9 @@ This function reads archives by specified years from working directory and
 return a list of data frames with year and month columns
 }
 \examples{
+\dontrun{
 fars_read_years(2019)
 fars_read_years(c(2019, 2018, "2017"))
-
-\dontrun{
-fars_read_years("a character")
 }
 
 }

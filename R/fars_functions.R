@@ -1,3 +1,5 @@
+globalVariables(c('STATE', 'MONTH', 'year', 'n'))
+
 #' Read a delimited file into a tibble
 #'
 #' This function reads comma separated data from specified file path.
@@ -13,11 +15,9 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
+#' \dontrun{
 #' fars_read(file.path("data", "accident_2013.csv.bz2"))
 #' fars_read("accident_2013.csv")
-#'
-#' \dontrun{
-#' fars_read("https://github.com/tidyverse/readr/raw/master/inst/extdata/mtcars.csv")
 #' }
 #'
 #' @export
@@ -41,11 +41,9 @@ fars_read <- function(filename) {
 #' @return The function returns a character vector with a unified name of a file.
 #'
 #' @examples
+#' \dontrun{
 #' make_filename(2019)
 #' make_filename(c(2019, 2018, "2017"))
-#'
-#' \dontrun{
-#' make_filename("a character")
 #' }
 #'
 #' @export
@@ -67,11 +65,9 @@ make_filename <- function(year) {
 #' @importFrom dplyr mutate select %>%
 #'
 #' @examples
+#' \dontrun{
 #' fars_read_years(2019)
 #' fars_read_years(c(2019, 2018, "2017"))
-#'
-#' \dontrun{
-#' fars_read_years("a character")
 #' }
 #'
 #' @export
@@ -102,11 +98,9 @@ fars_read_years <- function(years) {
 #' @importFrom tidyr spread
 #'
 #' @examples
+#' \dontrun{
 #' fars_summarize_years(2019)
 #' fars_summarize_years(c(2019, 2018, "2017"))
-#'
-#' \dontrun{
-#' fars_summarize_years("a character")
 #' }
 #'
 #' @export
@@ -133,12 +127,9 @@ fars_summarize_years <- function(years) {
 #' @importFrom maps map
 #'
 #' @examples
+#' \dontrun{
 #' fars_map_state(4,2013)
 #' fars_map_state("6",2013)
-#'
-#' \dontrun{
-#' fars_map_state(c(4,6), 2013)
-#' fars_map_state(5, c(2019, 2018, "2017"))
 #' }
 #'
 #' @export

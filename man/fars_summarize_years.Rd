@@ -17,11 +17,9 @@ This function reads archives by specified years from working directory and
 count number of entries in files by year and month
 }
 \examples{
+\dontrun{
 fars_summarize_years(2019)
 fars_summarize_years(c(2019, 2018, "2017"))
-
-\dontrun{
-fars_summarize_years("a character")
 }
 
 }
