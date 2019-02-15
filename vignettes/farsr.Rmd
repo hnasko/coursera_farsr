@@ -2,11 +2,15 @@
 title: "FARSR Analysis Package"
 author: "Hanna Nasko"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output: 
+  md_document:
+  rmarkdown::html_vignette:
+  variant: markdown_github
+keep_md: true
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, include = FALSE}
@@ -15,6 +19,8 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+
+[![Build Status](https://travis-ci.org/hnasko/coursera_farsr.svg?branch=master)](https://travis-ci.org/hnasko/coursera_farsr)
 
 ## Introduction
 
