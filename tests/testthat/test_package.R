@@ -1,4 +1,5 @@
 library(farsr)
+
 context("Test farsr package")
 
 
