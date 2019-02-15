@@ -3,8 +3,8 @@ title: "FARSR Analysis Package"
 author: "Hanna Nasko"
 date: "`r Sys.Date()`"
 output: 
-  md_document:
   rmarkdown::html_vignette:
+  md_document:
   variant: markdown_github
 keep_md: true
 vignette: >
