@@ -8,9 +8,11 @@ This packages is designed for work with the data from the US National
 Highway Traffic Safety Administration's Fatality Analysis Reporting
 System (FARS).
 
-The package provides functionality: \* to read data from files; \* to
-summarise data on a yearly basis; \* to visualise incidents in a given
-state and year.
+The package provides functionality:
+
+-   to read data from files;
+-   to summarise data on a yearly basis;
+-   to visualise incidents in a given state and year.
 
 Package functionality
 ---------------------
